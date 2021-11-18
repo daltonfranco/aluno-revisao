@@ -3,17 +3,12 @@ public class App {
 
         Aluno aluno = new Aluno();
 
-        aluno.setNome("Roberval");
-        aluno.setMatricula("123123123123");
-        aluno.setCurso("Big data no agronegocio");
+        aluno.setNome("Dalton");
+        aluno.setCurso("Big Data");
+        aluno.setDiciplina("Java 1");
 
-        aluno.setDiciplinas("Java 2", "IOT", "Calculo");
-        aluno.setNotas(8.0,5.9,9.5);
-
-        aluno.getNome();
-        aluno.getCurso();
-
+        aluno.notas(5.0, 8.9, 9.2);
+        
         aluno.verificaAprovacao();
-
     }
 }

@@ -3,9 +3,7 @@ public class Aluno{
     private String nome;
     private String matricula;
     private String curso;
-    private String diciplina1;
-    private String diciplina2;
-    private String diciplina3;
+    private String diciplina;
     private double nota1;
     private double nota2;
     private double nota3;
@@ -31,38 +29,18 @@ public class Aluno{
         this.curso = curso;
     }
 
-    public void setDiciplinas(String diciplina1, String diciplina2, String diciplina3) {
-        this.diciplina1 = diciplina1;
-        this.diciplina2 = diciplina2;
-        this.diciplina3 = diciplina3;
+    public void setDiciplina(String diciplina){
+        this.diciplina = diciplina;
     }
-    public String getDiciplina1() {
-        return diciplina1;
-    }
-    public void setDiciplina1(String diciplina1) {
-        this.diciplina1 = diciplina1;
-    }
-    public String getDiciplina2() {
-        return diciplina2;
-    }
-    public void setDiciplina2(String diciplina2) {
-        this.diciplina2 = diciplina2;
-    }
-    public String getDiciplina3() {
-        return diciplina3;
-    }
-    public void setDiciplina3(String diciplina3) {
-        this.diciplina3 = diciplina3;
+
+    public String getDiciplina(){
+        return this.diciplina;
     }
     
-    public void setNotas(double nota1, double nota2, double nota3) {
-        
+    public void notas(double nota1, double nota2, double nota3) {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
-        
-        
-        
     }
 
     public double getNota1() {
@@ -87,31 +65,16 @@ public class Aluno{
     
     public void verificaAprovacao(){
 
+        double media = (this.nota1 + this.nota2 + this.nota3)/3.0;
 
-        if(this.nota1 >= 7){
-            System.out.println("Aprovado na de " + this.diciplina1);
+        if(media < 7){
+            System.out.println("Reprovado na diciplina de " + this.diciplina);
         }else{
-            System.out.println("Reprovado na diciplina de " + this.diciplina1);
+            System.out.println("Aprovado na diciplina de " + this.diciplina);
         }
-
-
-        if(this.nota2 >= 7){
-            System.out.println("Aprovado na diciplina de " + this.diciplina2);
-        }else{
-            System.out.println("Reprovado na diciplina de " + this.diciplina2);
-        }
-
-
-
-        if(this.nota3 >= 7){
-            System.out.println("Aprovado na dicipina de " + this.diciplina3);
-        }else{
-            System.out.println("Reprovado na diciplina de " + this.diciplina3);
-        }
-
+        
 
     }
-    
-    
+     
 
 }
